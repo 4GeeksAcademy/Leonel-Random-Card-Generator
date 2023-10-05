@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -12,18 +12,61 @@
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+  <body style="background: green;">
+    <div>
+      <div class="container-fluid text-center">
+        <div
+          class="card mb-3"
+          id="cardValueInput"
+          style="width: 410px; height: 650px; border-radius: 25px; margin: auto; margin-top: 30px;"
+        >
+          <div class="card-body">
+            <div class="row align-items-start">
+              <div class="col">
+                <h1
+                  id="figure"
+                  style="font-size: 120px; position: absolute; left: 10px; top: 5px;"
+                ></h1>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col">
+                <h1
+                  id="number"
+                  style="font-size: 150px; position: absolute; top: 30%; text-align: center; right: 37%;"
+                ></h1>
+              </div>
+            </div>
+            <div class="row align-items-end">
+              <div class="col">
+                <h1
+                  id="figureTwo"
+                  style="font-size: 120px; position: absolute; bottom: 5px; right: 16px; transform: rotate(180deg);"
+                ></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-md-block">
+          <p>Push the button if you want to see a new card!</p>
+          <button
+            class="btn btn-primary"
+            style="width:150px;"
+            id="buttonChange"
+            type="button"
+          >
+            The button!
+          </button>
+        </div>
+        <div style="margin-top: 20px;">
+          <p>You can change the Width and the Height of your card below!</p>
+          <label for="cardWidth">Card Width:</label>
+          <input type="text" id="cardWidth" placeholder="Enter width" />
+          <label for="cardHeight">Card Height:</label>
+          <input type="text" id="cardHeight" placeholder="Enter height" />
+        </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
